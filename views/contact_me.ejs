@@ -1,0 +1,19 @@
+<%- include("partials_files/head.ejs") %>
+
+<% if (locals.Heading) { %>
+  <h1> Thank You for visiting my website 😊</h1> 
+<% } else { %>
+    <h1>Contact Me</h1> 
+<% } %>
+
+<div class="contact">
+  <form action="/contact_me" method="POST">
+    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+    <input type="submit" value="SUBMIT" />
+  </form>
+</div>
+
+
+<%- include("partials_files/foot.ejs") %>
